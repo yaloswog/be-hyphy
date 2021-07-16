@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>behyphy</title>
+<meta name="description" content="">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://hyper.rs/css/main.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
+<link rel="icon" href="./icons/favicon.ico" type="image/x-icon">
+ 
+<link rel="canonical" href="https://hyper.rs/">
+
+  </head>
+  <body id="hyper" class="hyper-home">
+    <header class="navbar navbar-toggleable-md navbar-hyper" role="navigation">
+  <nav class="container">
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="navbar-brand" href="/">be hyphy</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/guides"></a></li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/hyperium/hyper">Source</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <section class="jumbotron hyper-pageheader" style= background:#040404>
+      <div class="container">
+
+        <style>
+
+        .behyphy-logo {
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+        }    
+      
+      </style>
+        
+        <img class="behyphy-logo" src="file:///D:/hyphy/site//assets/logo-white.png" alt="be hyphy">
+        <p><a href="/guides" class="btn hyper-getstarted">Join the Community</a></p>
+      </div>
+    </section>
+    <section class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="lead">hyper is a fast HTTP implementation written in and for Rust.</p>
+        <ul>
+            <li>A <strong>Client</strong> for talking to web services.</li>
+            <li>A <strong>Server</strong> for building those web services.</li>
+            <li>Blazing <strong>fast</strong><a href="https://www.techempower.com/benchmarks/#section=data-r18&hw=ph&test=plaintext">*</a> thanks to Rust.</li>
+            <li>High <strong>concurrency</strong> with non-blocking sockets.</li>
+            <li>HTTP/1 and <strong>HTTP/2</strong> support.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cs"># extern crate hyper;</span>
+<span class="cs"># extern crate tokio;</span>
+<span class="cs"># mod no_run {</span>
+<span class="k">use</span> <span class="nn">std</span><span class="p">::{</span><span class="nn">convert</span><span class="p">::</span><span class="n">Infallible</span><span class="p">,</span> <span class="nn">net</span><span class="p">::</span><span class="n">SocketAddr</span><span class="p">};</span>
+<span class="k">use</span> <span class="nn">hyper</span><span class="p">::{</span><span class="n">Body</span><span class="p">,</span> <span class="n">Request</span><span class="p">,</span> <span class="n">Response</span><span class="p">,</span> <span class="n">Server</span><span class="p">};</span>
+<span class="k">use</span> <span class="nn">hyper</span><span class="p">::</span><span class="nn">service</span><span class="p">::{</span><span class="n">make_service_fn</span><span class="p">,</span> <span class="n">service_fn</span><span class="p">};</span>
+
+<span class="k">async</span> <span class="k">fn</span> <span class="nf">handle</span><span class="p">(</span><span class="mi">_</span><span class="p">:</span> <span class="n">Request</span><span class="o">&lt;</span><span class="n">Body</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">-&gt;</span> <span class="n">Result</span><span class="o">&lt;</span><span class="n">Response</span><span class="o">&lt;</span><span class="n">Body</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Infallible</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="nf">Ok</span><span class="p">(</span><span class="nn">Response</span><span class="p">::</span><span class="nf">new</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="nf">.into</span><span class="p">()))</span>
+<span class="p">}</span>
+
+<span class="nd">#[tokio::main]</span>
+<span class="k">async</span> <span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">addr</span> <span class="o">=</span> <span class="nn">SocketAddr</span><span class="p">::</span><span class="nf">from</span><span class="p">(([</span><span class="mi">127</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">3000</span><span class="p">));</span>
+
+    <span class="k">let</span> <span class="n">make_svc</span> <span class="o">=</span> <span class="nf">make_service_fn</span><span class="p">(|</span><span class="mi">_</span><span class="n">conn</span><span class="p">|</span> <span class="k">async</span> <span class="p">{</span>
+        <span class="nn">Ok</span><span class="p">::</span><span class="o">&lt;</span><span class="mi">_</span><span class="p">,</span> <span class="n">Infallible</span><span class="o">&gt;</span><span class="p">(</span><span class="nf">service_fn</span><span class="p">(</span><span class="n">handle</span><span class="p">))</span>
+    <span class="p">});</span>
+
+    <span class="k">let</span> <span class="n">server</span> <span class="o">=</span> <span class="nn">Server</span><span class="p">::</span><span class="nf">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">addr</span><span class="p">)</span><span class="nf">.serve</span><span class="p">(</span><span class="n">make_svc</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="k">let</span> <span class="nf">Err</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">=</span> <span class="n">server</span><span class="k">.await</span> <span class="p">{</span>
+        <span class="nd">eprintln!</span><span class="p">(</span><span class="s">"server error: {}"</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cs"># }</span>
+</code></pre></div></div>
+
+      </div>
+
+    </div>
+    </section>
+
+    <footer class="hyper-footer col-md-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 text-center text-sm-left text-muted">&copy; 2021 hyper</div>
+            <div class="col-sm-6 text-center text-sm-right">
+                <a href="https://github.com/hyperium/hyperium.github.io/blob/master/index.md">
+                    edit this page on github
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://hyper.rs/js/rustdoc.js"></script>
+
+  </body>
+</html>
+

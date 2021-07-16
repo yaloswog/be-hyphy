@@ -1,0 +1,60 @@
+:root {
+    --clr-neon: #fff;
+    --clr-bg: #1b1b1b;
+  }
+  
+  @font-face {
+      font-family: "coolvetica";
+      src: url('/assets/coolvetica.ttf');
+  }
+
+  body {
+    min-height: 100vh;  
+    display: grid;
+    place-items: center;
+    background: var(--clr-bg);
+    font-family: "coolvetica", cursive;
+    color: var(--clr-neon);
+  }
+  
+  .neon-button {
+    font-size: 8rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    position: relative;
+  }
+  
+  .neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.5), 0 0 0.45em #1b1b1b;
+    box-shadow: 0 0 20em 10em var(--clr-neon);
+    filter: blur(2em);
+    opacity: 0;
+    background-color: #fff;
+    z-index: -1;
+    transition: opacity 50ms linear;
+  }
+  
+  .neon-button:hover,
+  .neon-button:focus {
+    color: var(--clr-bg);
+    text-shadow: none;
+  }
+  
+  .neon-button:hover::before,
+  .neon-button:focus::before {
+    opacity: 1;
+  }
+  .neon-button:hover::after,
+  .neon-button:focus::after {
+    opacity: 1;
+  }
+  
