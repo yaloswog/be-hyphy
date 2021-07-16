@@ -14,6 +14,7 @@
     place-items: center;
     background: var(--clr-bg);
     font-family: "coolvetica", cursive;
+    font-style: italic;
     color: var(--clr-neon);
   }
   
