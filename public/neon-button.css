@@ -1,6 +1,6 @@
 :root {
     --clr-neon: #fff;
-    --clr-bg: #1b1b1b;
+    --clr-bg: #ed1c24;
   }
   
   @font-face {
@@ -34,7 +34,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.5), 0 0 0.45em #1b1b1b;
+    text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.5), 0 0 0.45em #ed1c24;
     box-shadow: 0 0 20em 10em var(--clr-neon);
     filter: blur(2em);
     opacity: 0;
