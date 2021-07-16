@@ -4,17 +4,18 @@
   }
   
   @font-face {
-      font-family: "coolvetica";
-      src: url("https://use.typekit.net/mul0tlw.css");
-  }
+    font-family:"coolvetica";
+    src:url("https://use.typekit.net/af/e17c35/000000000000000077359672/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/e17c35/000000000000000077359672/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/e17c35/000000000000000077359672/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:500;
+    }
+    
 
   body {
     min-height: 100vh;  
     display: grid;
     place-items: center;
     background: var(--clr-bg);
-    font-family: "coolvetica";
-    font-style: italic;
+    font-family: "coolvetica", sans-serif;
     color: var(--clr-neon);
   }
   
