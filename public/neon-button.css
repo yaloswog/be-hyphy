@@ -4,8 +4,8 @@
   }
   
   @font-face {
-      font-family: "Futura Md BT bold italic";
-      src: url('/assets/futura-bold-italic-bt.ttf');
+      font-family: "coolvetica";
+      src: url('/assets/coolvetica.ttf');
   }
 
   body {
@@ -13,7 +13,8 @@
     display: grid;
     place-items: center;
     background: var(--clr-bg);
-    font-family: "Futura Md BT bold italic";
+    font-family: "coolvetica";
+    font-style: italic;
     color: var(--clr-neon);
   }
   
