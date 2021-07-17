@@ -1,6 +1,6 @@
 :root {
-    --clr-neon: #040403;
-    --clr-bg: #9ddbad;
+    --clr-neon: #FFD046;
+    --clr-bg: #101119;
   }
   
   @font-face {
@@ -19,8 +19,8 @@
     color: var(--clr-neon);
   }
   
-  .neon-button {
-    font-size: 8rem;
+  .color-flip {
+    font-size: 10rem;
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
@@ -29,34 +29,33 @@
     position: relative;
   }
   
-  .neon-button::after {
+  .color-flip::after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.5), 0 0 0.45em #ed1c24;
-    box-shadow: 0 0 20em 10em var(--clr-neon);
-    filter: blur(2em);
+    box-shadow: 0 0 100em 100em var(--clr-neon);
+    filter: blur(10em);
     opacity: 0;
-    background-color: #fff;
+    background-color: var(--clr-neon);
     z-index: -1;
-    transition: opacity 50ms linear;
+    transition: opacity 5ms linear;
   }
   
-  .neon-button:hover,
-  .neon-button:focus {
+  .color-flip:hover,
+  .color-flip:focus {
     color: var(--clr-bg);
     text-shadow: none;
   }
   
-  .neon-button:hover::before,
-  .neon-button:focus::before {
+  .color-flip:hover::before,
+  .color-flip:focus::before {
     opacity: 1;
   }
-  .neon-button:hover::after,
-  .neon-button:focus::after {
+  .color-flip:hover::after,
+  .color-flip:focus::after {
     opacity: 1;
   }
   
