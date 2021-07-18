@@ -33,6 +33,30 @@
     color: var(--main-yellow);
   }
 
+  .blue {
+    min-height: 100vh;  
+    display: grid;
+    place-items: center;
+    background: var(--main-blue);
+    font-family: "coolvetica", sans-serif;
+    color: var(--alt-cyan);
+  }
+  .red {
+    min-height: 100vh;  
+    display: grid;
+    place-items: center;
+    background: var(--alt-red);
+    font-family: "coolvetica", sans-serif;
+    color: var(--main-yellow);
+  }
+  .gray {
+    min-height: 100vh;  
+    display: grid;
+    place-items: center;
+    background: var(--alt-gray);
+    font-family: "coolvetica", sans-serif;
+    color: var(--main-yellow);
+  }
   .color-flip {
     font-size: 8rem;
     display: inline-block;
