@@ -1,8 +1,22 @@
 :root {
-    --clr-neon: #FFD046;
-    --clr-bg: #002642;
+    --main-yellow: #FFD046;
+    --main-blue: #002642;
+    --alt-red: #840032;
+    --alt-cyan: #CBF3F0;
+    --alt-gray: #5C5C5C;
   }
-  
+  .blue-mode {
+    color: var(--alt-cyan);
+    background-color: var(--main-blue);
+  }
+  .red-mode {
+    color: var(--main-yellow);
+    background-color: var(--alt-red);
+  }
+  .gray-mode {
+    color: var(--alt-yellow);
+    background-color: var(--alt-gray);
+  }
   @font-face {
     font-family:"coolvetica";
     src:url("https://use.typekit.net/af/e17c35/000000000000000077359672/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/e17c35/000000000000000077359672/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/e17c35/000000000000000077359672/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
@@ -14,9 +28,9 @@
     min-height: 100vh;  
     display: grid;
     place-items: center;
-    background: var(--clr-bg);
+    background: var(--main-blue);
     font-family: "coolvetica", sans-serif;
-    color: var(--clr-neon);
+    color: var(--main-yellow);
   }
 
   .color-flip {
@@ -24,7 +38,7 @@
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    color: var(--clr-neon);
+    color: var(--main-yellow);
     position: relative;
   }
   
@@ -35,17 +49,17 @@
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 0 100em 100em var(--clr-neon);
+    box-shadow: 0 0 100em 100em var(--main-yellow);
     filter: blur(10em);
     opacity: 0;
-    background-color: var(--clr-neon);
+    background-color: var(--main-yellow);
     z-index: -1;
     transition: opacity 1ms linear;
   }
   
   .color-flip:hover,
   .color-flip:focus {
-    color: var(--clr-bg);
+    color: var(--main-blue);
     text-shadow: none;
   }
   
@@ -63,7 +77,7 @@
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    color: var(--clr-neon);
+    color: var(--main-yellow);
     position: relative;
   }
   
@@ -74,17 +88,17 @@
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: 1000em, 1000em, 1000em, 100em, 100em, var(--clr-neon);
+    box-shadow: 1000em, 1000em, 1000em, 100em, 100em, var(--main-yellow);
     filter: blur(100em);
     opacity: 0;
-    background-color: var(--clr-neon);
+    background-color: var(--main-yellow);
     z-index: -2;
     transition: opacity 1s linear;
   }
   
   .flashlight:hover,
   .flashlight:focus {
-    color: var(--clr-bg);
+    color: var(--main-blue);
     text-shadow: none;
   }
   
