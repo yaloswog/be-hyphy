@@ -1,0 +1,11 @@
+Colors:
+
+Main Colors:
+var(--main-yellow: #FFD046)
+var(--main-blue: #002642)
+
+Alternate Colors:
+
+var(--alt-red: #840032)
+var(--alt-cyan: #CBF3F0)
+var(--alt-grey: #5C5C5C)
