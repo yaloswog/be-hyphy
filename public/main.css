@@ -18,14 +18,13 @@
     font-family: "coolvetica", sans-serif;
     color: var(--clr-neon);
   }
-  
+
   .color-flip {
     font-size: 10rem;
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon);
-
     position: relative;
   }
   
@@ -36,12 +35,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 0 100em 100em var(--clr-neon);
-    filter: blur(10em);
+    box-shadow: 1000em, 1000em, 1000em, 100em, 100em, var(--clr-neon);
+    filter: blur(100em);
     opacity: 0;
     background-color: var(--clr-neon);
-    z-index: -1;
-    transition: opacity 5ms linear;
+    z-index: -2;
+    transition: opacity 1s linear;
   }
   
   .color-flip:hover,
@@ -59,3 +58,41 @@
     opacity: 1;
   }
   
+  .flashlight {
+    font-size: 10rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    position: relative;
+  }
+  
+  .flashlight::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 1000em, 1000em, 1000em, 100em, 100em, var(--clr-neon);
+    filter: blur(100em);
+    opacity: 0;
+    background-color: var(--clr-neon);
+    z-index: -2;
+    transition: opacity 1s linear;
+  }
+  
+  .flashlight:hover,
+  .flashlight:focus {
+    color: var(--clr-bg);
+    text-shadow: none;
+  }
+  
+  .flashlight:hover::before,
+  .flashlight:focus::before {
+    opacity: 1;
+  }
+  .flashlight:hover::after,
+  .flashlight:focus::after {
+    opacity: 1;
+  }
