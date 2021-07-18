@@ -1,0 +1,130 @@
+:root {
+    --main-yellow: #FFD046;
+    --main-blue: #002642;
+    --alt-red: #840032;
+    --alt-cyan: #CBF3F0;
+    --alt-gray: #5C5C5C;
+  }
+
+/* BLUE */
+
+.color-blue {
+    font-size: 8rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--alt-cyan);
+    position: relative;
+  }
+  
+  .color-blue::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 100em 100em var(--alt-cyan);
+    filter: blur(10em);
+    opacity: 0;
+    background-color: var(--alt-cyan);
+    z-index: -1;
+    transition: opacity 1ms linear;
+  }
+  
+  .color-blue:hover,
+  .color-blue:focus {
+    color: var(--main-blue);
+    text-shadow: none;
+  }
+  
+  .color-blue:hover::before,
+  .color-blue:focus::before {
+    opacity: 1;
+  }
+  .color-blue:hover::after,
+  .color-blue:focus::after {
+    opacity: 1;
+  }
+
+/* RED */
+
+  .color-red {
+    font-size: 8rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-yellow);
+    position: relative;
+  }
+  
+  .color-red::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 100em 100em var(--main-yellow);
+    filter: blur(10em);
+    opacity: 0;
+    background-color: var(--main-yellow);
+    z-index: -1;
+    transition: opacity 1ms linear;
+  }
+  
+  .color-red:hover,
+  .color-red:focus {
+    color: var(--alt-red);
+    text-shadow: none;
+  }
+  
+  .color-red:hover::before,
+  .color-red:focus::before {
+    opacity: 1;
+  }
+  .color-red:hover::after,
+  .color-red:focus::after {
+    opacity: 1;
+  }
+
+  /* GRAY */
+
+  .color-gray {
+    font-size: 8rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-yellow);
+    position: relative;
+  }
+  
+  .color-gray::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 100em 100em var(--main-yellow);
+    filter: blur(10em);
+    opacity: 0;
+    background-color: var(--main-yellow);
+    z-index: -1;
+    transition: opacity 1ms linear;
+  }
+  
+  .color-gray:hover,
+  .color-gray:focus {
+    color: var(--alt-gray);
+    text-shadow: none;
+  }
+  
+  .color-gray:hover::before,
+  .color-gray:focus::before {
+    opacity: 1;
+  }
+  .color-gray:hover::after,
+  .color-gray:focus::after {
+    opacity: 1;
+  }
