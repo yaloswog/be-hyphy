@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Variables */
+:root {
+  --font-family: "Poppins", san-serif;
+  --normal-font: 100;
+  --bold-font: 100;
+  --bolder-font: 100;
+  --background-color: #26dfa7;
+  --primary-color: #222;
+  --secondary-color: #fff;
+  --primary-shadow: #1eae82;
+  --secondary-shadow: #2effcc;
+  --bottom-margin: 0.5rem;
+  --line-height: 1.7rem;
+}
+/* Variables end */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: right;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  color: var(--background-color);
+  text-shadow:  .04rem .02rem 0.01rem var(--primary-shadow),
+  -.04rem -.02rem 0.01rem var(--secondary-shadow);
+}
+
+
+body {
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  background-color: var(--background-color);
+}
+
+.container {
+    max-width: 22.5rem;
+    height: 35rem;
+    margin-bottom: .5rem;
+    margin: auto;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    box-shadow:  5px 5px 20px var(--primary-shadow),
+    -5px -5px 20px var(--secondary-shadow);
+  }
+  
+button {
+    font-family: "Poppins", san-serif;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    border-radius: 50px;
+    box-shadow:  5px 5px 20px var(--primary-shadow),
+    -5px -5px 20px var(--secondary-shadow);
+    padding: 0px;
+    margin: .25rem;
+    border: none;
+}
+
+button { 
+  outline: none;
+}
+
+button:hover {
+  color: var(--secondary-color);
+}
+
+.result {
+  height: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: .45rem;
+  font-size: 1.5rem;
+  border-radius: 7.5px;
+  color: var(--primary-color);
+  background: var(--background-color);
+  box-shadow:  5px 5px 20px var(--primary-shadow),
+  -5px -5px 20px var(--secondary-shadow);
+  text-align: right;
+}
