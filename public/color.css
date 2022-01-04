@@ -13,7 +13,7 @@
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    color: var(--alt-cyan);
+    color: var(--main-yellow);
     position: relative;
   }
   

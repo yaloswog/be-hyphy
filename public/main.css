@@ -33,6 +33,24 @@
     color: var(--main-yellow);
   }
 
+  .color-flip {
+    font-size: 8rem;
+    display: inline-block;
+    cursor: url("https://img.itch.zone/aW1nLzQ1NDExNjEucG5n/347x500/EI6H4F.png"), auto;
+    text-decoration: none;
+    position: relative;
+  }
+
+  body:hover {
+    background-color: var(--main-blue);
+  }
+  
+  a:hover {
+    color: var(--main-blue)
+    background-color: var(--main-yellow);
+  }
+
+ /*
   .blue {
     min-height: 100vh;  
     display: grid;
